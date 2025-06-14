@@ -21,24 +21,36 @@
 // // To run this program, use the command:
 // // bal run -- 6
 
+// import ballerina/io;
+
+// int value;
+
+// final string name;
+
+// // The init function is called before the main function
+// function init() returns error? {
+//     value = 10;
+//     name = "Ballerina";
+
+//     if value > 5{
+//         return error("Value should be less than 5");
+//     }
+// }
+
+// public function main(){
+//     io:println("Value: ", value);
+//     io:println("Name: ", name);
+    
+// }
+
+
 import ballerina/io;
 
-int value;
+string greeting = "Hello, World!";
 
-final string name;
+public function main() {
 
-// The init function is called before the main function
-function init() returns error? {
-    value = 10;
-    name = "Ballerina";
-
-    if value > 5{
-        return error("Value should be less than 5");
-    }
-}
-
-public function main(){
-    io:println("Value: ", value);
-    io:println("Name: ", name);
-    
+    string name = "Ballerina";
+    greeting = greeting + " " + name + "!";
+    io:println(greeting);
 }
